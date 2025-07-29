@@ -101,7 +101,7 @@ public class OrangeHRMTest {
         }
     }
 
-    // Utility method: assert element is visible
+    // assert element is visible
     private void assertVisible(By locator, String name) {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -112,7 +112,7 @@ public class OrangeHRMTest {
         }
     }
 
-    // Utility method: take screenshots
+    // take screenshots
     private void takeScreenshot(String name) {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File src = ts.getScreenshotAs(OutputType.FILE);
@@ -122,9 +122,9 @@ public class OrangeHRMTest {
         try {
             Files.createDirectories(dest.getParentFile().toPath());
             Files.copy(src.toPath(), dest.toPath());
-            System.out.println("📸 Screenshot saved: " + dest.getAbsolutePath());
+            System.out.println("Screenshot saved: " + dest.getAbsolutePath());
         } catch (IOException e) {
-            System.err.println("⚠️ Screenshot failed: " + e.getMessage());
+            System.err.println("Screenshot failed: " + e.getMessage());
         }
     }
 }
